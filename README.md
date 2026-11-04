@@ -28,3 +28,7 @@ The image-guided update preserves court coordinates and scale, moves the tree an
 ## v1-2 development notes
 
 The miniature rotates 90° clockwise as a group while camera and lighting stay fixed. Court dimensions are unchanged; wider fencing, a shifted path and reserved school area, and a static passing-machine placeholder provide room for later development. The machine head is grouped for future aiming. Framing was widened for the enlarged platform. Build passed (Vite reports its existing bundle-size warning); Chromium checks at 1440×900 and 932×430 showed no console errors or visible clipping. Mobile was emulated, not tested on a physical Galaxy S24. The machine does not animate or fire.
+
+## v1-3 development notes
+
+Added a two-storey school in the reserved area, with a roof parapet, water tank and two outdoor units; the building and roof equipment are grouped with the rotating miniature. Added crossed net strands, lightweight fence wire panels and open gate leaves. Existing court, camera and rotation are preserved. `npm run build` and `git diff --check` passed; Chromium checks at 1440×900 and 932×430 showed no console errors or visible clipping. The net is too small at the fixed overall view for its individual strands to be reliably judged on screen. Mobile was emulated; physical-device validation was not performed. The Vite bundle-size warning remains.
