@@ -72,11 +72,12 @@ const head = new THREE.Group(); head.position.y=1.05; machine.add(head);
 const body = new THREE.Mesh(new THREE.BoxGeometry(.9,.65,.8), mat('#c88343')); head.add(body);
 const barrel = new THREE.Mesh(new THREE.CylinderGeometry(.23,.3,.55,12), materials.metal); barrel.rotation.x=Math.PI/2; barrel.position.z=.55; head.add(barrel);
 machine.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}}); scene.add(machine);
-// Keep camera and lights fixed. Rotate the whole miniature another 90 degrees from v1-2
-// so the platform tilts toward upper-left in screen space and the decorated board face stays visible.
+// View from the board's marked front face. On screen, the court's long axis
+// rises toward the upper-left and falls toward the lower-right (reference sketch).
+// Keep camera and lighting fixed; rotate the whole miniature as one group.
 const diorama = new THREE.Group();
 for (const child of [...scene.children]) if (child.isMesh || child === machine) diorama.add(child);
-diorama.rotation.y = -Math.PI;
+diorama.rotation.y = -Math.PI / 2;
 scene.add(diorama);
 function resize(){const aspect=innerWidth/innerHeight; const height=Math.max(46, 62/aspect);camera.left=-height*aspect/2;camera.right=height*aspect/2;camera.top=height/2;camera.bottom=-height/2;camera.near=.1;camera.far=100;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.render(scene,camera);}
 addEventListener('resize',resize);resize();
