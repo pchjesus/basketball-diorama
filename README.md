@@ -24,3 +24,7 @@ Validated: production build and Chromium rendering at 1440×900 and 932×430 (mo
 No earlier application or tests existed to regress. Structural refactoring is not currently warranted; reconsider splitting the scene as independent animated objects are added.
 
 The image-guided update preserves court coordinates and scale, moves the tree and benches to the walkway, adds translucent fence infill and deepens the platform. Rechecked in Chromium at 1440×900 and 932×430; no console errors. Real-device and public-site validation remain unperformed.
+
+## v1-2 development notes
+
+The miniature rotates 90° clockwise as a group while camera and lighting stay fixed. Court dimensions are unchanged; wider fencing, a shifted path and reserved school area, and a static passing-machine placeholder provide room for later development. The machine head is grouped for future aiming. Framing was widened for the enlarged platform. Build passed (Vite reports its existing bundle-size warning); Chromium checks at 1440×900 and 932×430 showed no console errors or visible clipping. Mobile was emulated, not tested on a physical Galaxy S24. The machine does not animate or fire.
