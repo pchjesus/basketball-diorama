@@ -1,0 +1,28 @@
+{
+  "name": "basketball-diorama",
+  "version": "1.0.0",
+  "description": "An autonomous isometric 3D basketball diorama inspired by Klay Thompson's playstyle.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pchjesus/basketball-diorama.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/pchjesus/basketball-diorama/issues"
+  },
+  "homepage": "https://github.com/pchjesus/basketball-diorama#readme",
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
